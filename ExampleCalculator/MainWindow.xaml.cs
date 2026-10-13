@@ -20,5 +20,21 @@ namespace ExampleCalculator
         {
             InitializeComponent();
         }
+        private void Button_Digital_Click(object sender, RoutedEventArgs e)
+        {
+            var button = (Button)sender;
+            var textBlock = (TextBlock)button.Content;
+            string value = textBlock.Text;   // "0"
+
+            if(txtResult.Text == "0")
+            {
+                txtResult.Text = value; 
+            }
+            else
+            {
+                txtResult.Text += value;
+            }
+            //MessageBox.Show("Click button - " + value);
+        }
     }
 }
